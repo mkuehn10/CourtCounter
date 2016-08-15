@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CourtCounter</string>
+    <string name="addTouchdown">+Touchdown</string>
+    <string name="addFieldGoal">+Field Goal</string>
+    <string name="addSafety">+Safety</string>
+    <string name="addExtraPoint">+Extra Point</string>
+    <string name="teamA">Team A</string>
+    <string name="teamB">Team B</string>
 </resources>

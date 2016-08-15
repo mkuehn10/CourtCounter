@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
     private int scoreTeamA = 0;
     private int scoreTeamB = 0;
 
@@ -24,17 +23,22 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void addThreeForTeamA(View view) {
+    public void addTouchdownForTeamA(View view) {
+        scoreTeamA += 6;
+        displayForTeamA(scoreTeamA);
+    }
+
+    public void addFieldGoalForTeamA(View view) {
         scoreTeamA += 3;
         displayForTeamA(scoreTeamA);
     }
 
-    public void addTwoForTeamA(View view) {
+    public void addSafetyForTeamA(View view) {
         scoreTeamA += 2;
         displayForTeamA(scoreTeamA);
     }
 
-    public void addOneForTeamA(View view) {
+    public void addExtraPointForTeamA(View view) {
         scoreTeamA += 1;
         displayForTeamA(scoreTeamA);
     }
@@ -47,17 +51,22 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void addThreeForTeamB(View view) {
+    public void addTouchdownForTeamB(View view) {
+        scoreTeamB += 6;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void addFieldGoalForTeamB(View view) {
         scoreTeamB += 3;
         displayForTeamB(scoreTeamB);
     }
 
-    public void addTwoForTeamB(View view) {
+    public void addSafetyForTeamB(View view) {
         scoreTeamB += 2;
         displayForTeamB(scoreTeamB);
     }
 
-    public void addOneForTeamB(View view) {
+    public void addExtraPointForTeamB(View view) {
         scoreTeamB += 1;
         displayForTeamB(scoreTeamB);
     }
