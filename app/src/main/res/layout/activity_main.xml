@@ -11,63 +11,34 @@
         tools:context="com.example.android.courtcounter.MainActivity">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
-            android:paddingTop="16dp">
+            style="@style/ScoreColumnLayout">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="@string/teamA"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                style="@style/TeamNameLayout"
+                android:text="@string/teamA"/>
 
             <TextView
-                android:id="@+id/team_a_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
+                style="@style/TeamScoreLayout"
+                android:id="@+id/team_a_score" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:onClick="addTouchdownForTeamA"
+                style="@style/ButtonStyle"
+                android:id="@+id/addTouchdownForTeamA"
                 android:text="@string/addTouchdown" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginBottom="8dp"
-                android:onClick="addFieldGoalForTeamA"
+                style="@style/ButtonStyle"
+                android:id="@+id/addFieldGoalForTeamA"
                 android:text="@string/addFieldGoal" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:onClick="addSafetyForTeamA"
+                style="@style/ButtonStyle"
+                android:id="@+id/addSafetyForTeamA"
                 android:text="@string/addSafety" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="addExtraPointForTeamA"
+                style="@style/ButtonStyle"
+                android:id="@+id/addExtraPointForTeamA"
                 android:text="@string/addExtraPoint" />
 
         </LinearLayout>
@@ -79,62 +50,34 @@
             android:background="@android:color/darker_gray" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
-            android:paddingTop="16dp">
+            style="@style/ScoreColumnLayout">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="@string/teamB"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                style="@style/TeamNameLayout"
+                android:text="@string/teamB"/>
 
             <TextView
-                android:id="@+id/team_b_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
+                style="@style/TeamScoreLayout"
+                android:id="@+id/team_b_score" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:onClick="addTouchdownForTeamB"
+                style="@style/ButtonStyle"
+                android:id="@+id/addTouchdownForTeamB"
                 android:text="@string/addTouchdown" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:onClick="addFieldGoalForTeamB"
+                style="@style/ButtonStyle"
+                android:id="@+id/addFieldGoalForTeamB"
                 android:text="@string/addFieldGoal" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:onClick="addSafetyForTeamB"
+                style="@style/ButtonStyle"
+                android:id="@+id/addSafetyForTeamB"
                 android:text="@string/addSafety" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="addExtraPointForTeamB"
+                style="@style/ButtonStyle"
+                android:id="@+id/addExtraPointForTeamB"
                 android:text="@string/addExtraPoint" />
 
         </LinearLayout>
@@ -142,6 +85,7 @@
     </LinearLayout>
 
     <Button
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

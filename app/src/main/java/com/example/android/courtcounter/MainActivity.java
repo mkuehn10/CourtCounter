@@ -18,63 +18,85 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Team A.
      */
-    public void displayForTeamA(int score) {
+    public void displayForTeamA() {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+        scoreView.setText(String.valueOf(scoreTeamA));
     }
 
-    public void addTouchdownForTeamA(View view) {
-        scoreTeamA += 6;
-        displayForTeamA(scoreTeamA);
-    }
-
-    public void addFieldGoalForTeamA(View view) {
-        scoreTeamA += 3;
-        displayForTeamA(scoreTeamA);
-    }
-
-    public void addSafetyForTeamA(View view) {
-        scoreTeamA += 2;
-        displayForTeamA(scoreTeamA);
-    }
-
-    public void addExtraPointForTeamA(View view) {
-        scoreTeamA += 1;
-        displayForTeamA(scoreTeamA);
-    }
 
     /**
      * Displays the given score for Team B.
      */
-    public void displayForTeamB(int score) {
+    public void displayForTeamB() {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+        scoreView.setText(String.valueOf(scoreTeamB));
     }
 
-    public void addTouchdownForTeamB(View view) {
-        scoreTeamB += 6;
-        displayForTeamB(scoreTeamB);
+    /**
+     * Calls the display methods to update both scores.
+     */
+    public void updateScores() {
+        displayForTeamA();
+        displayForTeamB();
     }
 
-    public void addFieldGoalForTeamB(View view) {
-        scoreTeamB += 3;
-        displayForTeamB(scoreTeamB);
-    }
-
-    public void addSafetyForTeamB(View view) {
-        scoreTeamB += 2;
-        displayForTeamB(scoreTeamB);
-    }
-
-    public void addExtraPointForTeamB(View view) {
-        scoreTeamB += 1;
-        displayForTeamB(scoreTeamB);
-    }
-
+    /**
+     * Resets the scores to zero.
+     * @param view is the current view.
+     */
     public void resetScores(View view) {
         scoreTeamA = 0;
         scoreTeamB = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        updateScores();
+    }
+
+    /**
+     * Adds the appropriate score to Team A's total.
+     * @param score is the amount to increment.
+     */
+    public void incrementTeamA(int score) {
+        scoreTeamA += score;
+    }
+    /**
+     * Adds the appropriate score to Team B's total.
+     * @param score is the amount to increment.
+     */
+    public void incrementTeamB(int score) {
+        scoreTeamB += score;
+    }
+
+    /**
+     * Determines which button was pushed and calls appropriate increment method.
+     * Also updates the scores.
+     * @param view is the current view.
+     */
+    public void incrementScore(View view) {
+        switch (view.getId()) {
+            case R.id.addTouchdownForTeamA:
+                incrementTeamA(6);
+                break;
+            case R.id.addFieldGoalForTeamA:
+                incrementTeamA(3);
+                break;
+            case R.id.addSafetyForTeamA:
+                incrementTeamA(2);
+                break;
+            case R.id.addExtraPointForTeamA:
+                incrementTeamA(1);
+                break;
+            case R.id.addTouchdownForTeamB:
+                incrementTeamB(6);
+                break;
+            case R.id.addFieldGoalForTeamB:
+                incrementTeamB(3);
+                break;
+            case R.id.addSafetyForTeamB:
+                incrementTeamB(2);
+                break;
+            case R.id.addExtraPointForTeamB:
+                incrementTeamB(1);
+                break;
+        }
+        updateScores();
     }
 }

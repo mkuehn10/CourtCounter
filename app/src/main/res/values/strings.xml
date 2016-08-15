@@ -6,4 +6,5 @@
     <string name="addExtraPoint">+Extra Point</string>
     <string name="teamA">Team A</string>
     <string name="teamB">Team B</string>
+    <string name="initialScore">0</string>
 </resources>
